@@ -18,7 +18,7 @@ function createWindow () {
   mainWindow.loadURL('http://192.168.100.5:8080')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => createWindow())
