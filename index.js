@@ -14,7 +14,8 @@ function createWindow () {
     }
   })
 
-  mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
+  // mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
+  mainWindow.loadURL('http://192.168.100.5:8080')
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
