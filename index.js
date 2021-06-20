@@ -10,12 +10,13 @@ function createWindow () {
     fullscreen: true,
 
     webPreferences: {
-      // preload: path.join(__dirname, 'src', 'js', 'main.js')
+      preload: path.join(__dirname, 'bridge.js')
     }
   })
 
   // mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
   mainWindow.loadURL('http://192.168.100.5:8080')
+  // mainWindow.loadURL('http://localhost:8080/?2')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
