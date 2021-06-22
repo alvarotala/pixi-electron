@@ -18,9 +18,12 @@ const rfile = (path, callback) => {
   });
 };
 
-const wfile = (path, data, options = {}) => {
+const wfile = (path, data, options, onerror) => {
   fs.writeFile(path, data, options, (err) => {
-    if (err) console.error(err);
+    if (err && onerror) {
+      console.error(err);
+      onerror(err);
+    }
   });
 };
 
@@ -28,6 +31,6 @@ const wfile = (path, data, options = {}) => {
 
 contextBridge.exposeInMainWorld('electron', {
   file: { read: rfile, write: wfile },
-  
+
   foo: null
 });

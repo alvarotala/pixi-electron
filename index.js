@@ -5,8 +5,8 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 720,
-    height: 1280,
+    width: 720,  // 720
+    height: 1280, // 1280
     fullscreen: true,
 
     webPreferences: {
@@ -14,11 +14,15 @@ function createWindow () {
     }
   })
 
-  // mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
-  mainWindow.loadURL('http://192.168.100.5:8080')
+  mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
+
+  /// test from ubunntu core..
+  // mainWindow.loadURL('http://192.168.100.5:8080')
+
+  /// test from my mac
   // mainWindow.loadURL('http://localhost:8080/?2')
 
-  // Open the DevTools.
+  /// Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
 
