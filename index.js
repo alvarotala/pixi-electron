@@ -5,25 +5,25 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1800,  // 720
+    width: 720,  // 720
     height: 1280, // 1280
-    fullscreen: false,
+    fullscreen: true,
 
     webPreferences: {
       preload: path.join(__dirname, 'bridge.js')
     }
   })
 
-  // mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'www', 'index.html'));
 
   /// test from ubunntu core..
   // mainWindow.loadURL('http://192.168.100.5:8080')
 
   /// test from my mac
-  mainWindow.loadURL('http://localhost:8080/?2')
+  // mainWindow.loadURL('http://localhost:8080/?2')
 
   /// Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => createWindow())
