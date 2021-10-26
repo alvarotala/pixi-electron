@@ -5,7 +5,7 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1800,  // 720 // 1800
+    width: 720,  // 720 // 1800
     height: 1280, // 1280
     fullscreen: false,
 
@@ -14,7 +14,7 @@ function createWindow () {
     }
   });
 
-  // mainWindow.loadFile('/home/alvarotala/cfdist/index.html');
+  mainWindow.loadFile('/home/alvarotala/cfdist/index.html');
 
   /// mainWindow.loadFile(path.join(__dirname, 'www', 'index.html'));
 
@@ -22,11 +22,14 @@ function createWindow () {
   // mainWindow.loadURL('http://192.168.100.5:8080')
 
   /// test from my mac
-  mainWindow.loadURL('http://localhost:8080/?2')
+  /// mainWindow.loadURL('http://localhost:8080/?2')
 
   /// Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  /// mainWindow.webContents.openDevTools()
 }
+
+// bug trace: https://stackoverflow.com/questions/60106922/electron-non-context-aware-native-module-in-renderer
+// app.allowRendererProcessReuse = false
 
 app.whenReady().then(() => createWindow());
 

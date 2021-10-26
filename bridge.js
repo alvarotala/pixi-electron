@@ -6,6 +6,8 @@ const fs = require('fs')
 //   console.log(process);
 // });
 
+/// cant work here.. must use Serial or webservice....
+// const gpio = require('./gpio.js')
 
 
 const rfile = (path, callback) => {
