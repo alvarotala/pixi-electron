@@ -7,7 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 720,  // 720 // 1800
     height: 1280, // 1280
-    fullscreen: false,
+    fullscreen: true,
 
     webPreferences: {
       preload: path.join(__dirname, 'bridge.js')
