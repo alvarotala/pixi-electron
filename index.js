@@ -5,8 +5,8 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 720,  // 720 // 1800
-    height: 1280, // 1280
+    width: 1080,  // 720
+    height: 1920, // 1280
     fullscreen: true,
 
     webPreferences: {
